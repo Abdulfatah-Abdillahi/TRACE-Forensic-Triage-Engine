@@ -172,7 +172,12 @@ one carrying hashes — without it, threat intelligence has nothing to look up.
 - `data/outputs/TRACE_findings_<id>.csv` — one row per flagged executable
 
 ---
+## Documentation
 
+-  [TRACE Capstone Final Report (PDF)](docs/TRACE_Capstone_Final_Report.pdf):
+  methodology, design, implementation, experimental evaluation on malware and
+  benign datasets, limitations and future work.
+  
 ## Project layout
 
 ```text
@@ -200,3 +205,9 @@ data/                        uploads, work, outputs, caches, MITRE STIX
 ```
 
 For authorized forensic and academic use only.
+
+## Authors
+
+Team capstone project, Seneca Polytechnic, supervised by
+Professor Mark Shtern: Abdulfatah Abdillahi, Adesina Laja, Mahdi Afshar, and
+Hannan Karedia.
