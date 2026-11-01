@@ -1,0 +1,12 @@
+.env
+.venv/
+.idea/
+
+__pycache__/
+*.py[cod]
+
+data/uploads/*
+data/outputs/*
+data/cache/*
+data/mitre/enterprise-attack.json
+!data/**/.gitkeep
