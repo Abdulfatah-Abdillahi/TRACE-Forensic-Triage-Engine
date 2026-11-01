@@ -10,6 +10,26 @@ and produces a forensic PDF report plus a findings CSV.
 
 All AI analysis runs on the analyst's own machine. No artifact data leaves the host.
 
+## Quick start
+
+```powershell
+git clone https://github.com/Abdulfatah-Abdillahi/TRACE-Forensic-Triage-Engine.git
+cd TRACE-Forensic-Triage-Engine
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+copy .env.example .env
+python -m uvicorn backend.main:app --reload --port 8000
+```
+
+Then open <http://localhost:8000>.
+
+Before you run it: start the **LM Studio** local server with an instruct model
+loaded, and set `LOCAL_LLM_MODEL` in `.env` to match. Eric Zimmerman's tools are
+only needed if you upload raw artifacts rather than parsed CSVs. See
+[Setup](#setup) below for details.
+
+📄 **Full write-up:** [Capstone Final Report (PDF)](docs/TRACE_Capstone_Final_Report.pdf)
 ---
 
 ## The pipeline
@@ -51,6 +71,11 @@ is validated against the official ATT&CK catalogue before it can reach a
 report. Rejections are counted and printed in the PDF.
 
 ---
+
+
+## Pipeline Diagram
+<img width="977" height="706" alt="image" src="https://github.com/user-attachments/assets/dc4417f9-d82f-4ab9-b12f-c1c81c013b37" />
+
 
 ## Setup
 
